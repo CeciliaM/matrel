@@ -49,3 +49,8 @@ require_once( 'library/responsive-images.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
+
+
+/* MINIATURES */
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size( 95, 95, true );

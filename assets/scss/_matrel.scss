@@ -2,18 +2,27 @@ body {
   background: #efeeee;
   font-family: "Avenir Next", sans-serif;
 }
+
 header {
   text-transform: uppercase;
+  #responsive-header {
+    display: none;
+  }
   .top-bar {
     background: #FFF;
     color: #000;
+    img {
+      padding-right: 90px;
+    }
     ul {
       background: #FFF;
+      vertical-align: middle;
+      padding-right: 90px;
     }
     .menu {
       a {
           color: #000;
-          font-weight: 400;
+          font-weight: 500;
           &:hover {
             color: #f29400;
             background: none!important;
@@ -31,6 +40,16 @@ header {
     letter-spacing: 0.2em;
   }
 } /* END HEADER */
+
+
+#ariane {
+  font-size: 10px;
+  color: #666666;
+  text-align: left;
+}
+#page-produit {
+  padding-top: 40px;
+}
 
 .button {
   background-color: #f29400;
@@ -62,16 +81,249 @@ header {
   color: #666666;
   text-transform: uppercase;
   font-weight: 700;
+  &:hover {
+    background: #666666;
+    color: #FFF;
+  }
 }
 
 h1 {
   font-size: 25px;
   text-transform: uppercase;
   font-weight: 700;
+  font-family: "Avenir Next",sans-serif;
 }
 
 h2 {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 400;
+  font-family: "Avenir Next",sans-serif;
+}
+#titres {
+  display: inline-block;
+}
+h3 {
+  font-size: 14px;
+  font-family: "Avenir Next",sans-serif;
+}
+
+/* BLOC DESCRITPION */
+#description {
+  p {
+    font-size: 13px;
+  }
+  .button {
+    width:50%;
+  }
+  .buttongrey {
+    width:50%;
+  }
+}
+
+/* BLOC IMG PRINCIPALE */
+#img {
+  p {
+    font-size: 10px;
+    text-align: center;
+    padding: 7px;
+  }
+  #min {
+    a {
+      color: #666666;
+      line-height: 100px;
+      &:hover {
+        color: #FFF;
+        transition: 0.4s ease;
+      }
+      i {
+        font-size: 30px;
+        padding: 6px 15px;
+        border: 1px solid #666666;
+        &:hover {
+          background: #666666;
+        }
+      }
+    }
+    .thumbnail {
+      border: none;
+      &:hover {
+        box-shadow: 0 0 6px 1px rgba(242, 148, 0, 0.5);
+      }
+      }
+    }
+  }
+
+
+/*INFOS SUP */
+#plus-infos {
+  background: #FFF;
+  #titres-infos {
+    text-align: center;
+    margin-top: 20px;
+    a {
+      text-transform: uppercase;
+      color: #666666;
+      font-weight: 600;
+      font-family: "Avenir Next", sans-serif;
+      padding: 10px 15px 10px 15px;
+      &:active {
+        color: #000;
+      }
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  #liste-caract {
+    margin-left: 50px;
+    column-count: 4;
+    padding: 20px 0px 30px 0px;
+    p {
+      font-size: 12px;
+      margin-bottom: 10px;
+      line-height: 10px;
+    }
+  }
+  #video {
+
+  }
+} /* Fin plus infos
+
+
+/* FOOTER */
+footer {
+  font-size: 12px;
+  #bandeau {
+    background: #666666;
+    margin-bottom: 15px;
+    p {
+      text-transform: uppercase;
+      color: #FFF;
+    }
+    img {
+    }
+    .contenu-bandeau {
+      text-align: center;
+      padding: 20px 0px 10px 0px;
+    }
+  } /*Fin bandeau */
+
+  .menu > li > a {
+    padding: 0px;
+    padding: 8px;
+   }
+   a {
+     color: #666666;
+     &:hover {
+       color: #f29400;
+     }
+   }
+   #adress {
+     color: #666666;
+   }
+   #social {
+     .menu > li > a {
+       padding: 0px;
+       padding: 2px;
+       font-size: 30px;
+     }
+   }
+   #contact {
+     .button {
+       height: 80%;
+       width: 80%
+     }
+   }
+   #ml {
+     clear: both;
+     text-align: right;
+     color: #666666;
+   }
+
+}
+
+
+/* RESPONSIVE 320px et 480px */
+@media (max-width: 480px) {
+/*HEADER*/
+header {
+  .top-bar {
+    ul {
+      padding-right: 0px;
+    }
+    #logo {
+      display: none;
+    }
+    #btn-header {
+      display: block;
+    }
+  }
+
+  #responsive-header {
+    background: #FFF;
+    display: block;
+    text-align: center;
+  }
+  .title-bar {
+    background: #FFF;
+    color: #000;
+  }
+  .menu-icon::after {
+    background: #000;
+    box-shadow: 0 7px 0 #000, 0 14px 0 #000;
+  }
+  .menu li {
+    display: block;
+  }
+}
+
+/*MAIN */
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+
+#description {
+  .button {
+  width: 80%;
+}
+  .buttongrey {
+  width: 80%;
+}
+}
+
+#liste-caract {
+  column-count: auto;
+  padding: 20px 0px 30px 0px;
+  p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 10px;
+  }
+}
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    font-size: 14px;
+    #social {
+      .menu > li > a {
+        padding: 0px;
+        padding:10px;
+        font-size: 35px;
+      }
+    }
+    #contact {
+      .button {
+        font-size: 20px;
+        height: 100%;
+        width: 90%;
+        padding: 15px;
+      }
+    }
+  }
 }

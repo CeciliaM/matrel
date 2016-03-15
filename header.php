@@ -33,22 +33,25 @@
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
 	<header>
+		<div id="responsive-header">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" /><br/>
+				<a href="#" class="button"><span>Télécharger le</span><br/>catalogue matrel</a>
+		</div>
 		<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
 			<button class="menu-icon" type="button" data-toggle></button>
-			<div class="title-bar-title">Menu</div>
 		</div>
 
 		<div class="top-bar" id="example-menu">
 			<nav class="menu-centered">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" />
-				<ul class="menu">
+				<img id="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" />
+				<ul class="dropdown menu" data-dropdown-menu >
 					<li><a href="#">Accueil</a></li>
 					<li><a href="#">Produits</a></li>
 					<li><a href="#">Qui sommes-nous</a></li>
 					<li><a href="#">Contact</a></li>
-					<li><a href="#">documetation</a></li>
+					<li><a href="#">documentation</a></li>
 				</ul>
-				<a href="#" class="button"><span>Télécharger le</span><br/>catalogue matrel</a>
+				<a href="#" id="btn-header" class="button"><span>Télécharger le</span><br/>catalogue matrel</a>
 			</nav>
 		</div>
 	</header>

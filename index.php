@@ -15,38 +15,72 @@
 
 get_header(); ?>
 
-<div id="page" role="main">
+<div id="page-produit">
 <div class="row">
+	<p id="ariane">Accueil / Produits / Raineuse-plieuse-perforation</p>
+	<article id="post-<?php the_ID(); ?>">
+
+		<div id="titres">
+			<h1><?php the_field('titre'); ?></h1>
+			<h2><?php the_field('sous_titres'); ?>Raineuse-Plieuse Eurofold</h2>
+		</div>
+
+	<?php
+	if ( have_posts() ) {
+		while ( have_posts() ) {
+			the_post(); ?>
+
+			<div id="img" class="small-12 medium-6 large-6 columns">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/raineuse.png" />
+				<p><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></p>
+
+				<div id="min" class="row">
+					<div class="large-2 columns"><a href="#"><i class="fa fa-angle-left"></a></i></div>
+					<div class="large-8 columns">
+						<img class="thumbnail" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/miniatures/1.png" width="100" height="100">
+						<img class="thumbnail" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/miniatures/2.png" width="100" height="100">
+						<img class="thumbnail" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/miniatures/3.png" width="100" height="100">
+					</div>
+					<div class="large-2 columns"><a href="#"><i class="fa fa-angle-right"></a></i></div>
+				</div>
 
 
-	<div id="img" class="small-12 medium-6 large-6 columns">
-		<img src="#" />
-		<p>Raineuse-Plieuse Touchline CF 375 automatique</p>
-	</div>
+			</div>
 
-	<h1>Raineuse-Plieuse Touchline CF 375</h1>
-	<h2>Raineuse-Plieuse Eurofold</h2>
-	<div id="description" class="small-12 medium-6 large-6 columns" >
-		<h3>Rainage par lame et pliage, par systèmes brevetés Multigraf</h3>
-		<p><strong>Ecran tactile couleur.</strong>
-		L’écran tactile intuitif offre un accès direct à tous les éléments de commande..
-		<strong>Opération par une touche.</strong>
-		Une seule touche multifonctionnelle, positionnée de manière ergonomique pour entrer en production.
-		<strong>Margeur haute pile à aspiration.</strong>
-		Système par bandes aspirantes et soufflerie frontale. Idéal pour les forts grammages
-		<strong>Dispositif de perforation.</strong>
-		Disponible au niveau de la sortie inférieure.
-		<strong>Sortie supérieure.</strong>
-		Tapis de sortie à réglage automatique pour les documents pliés. Grande capacité
-		<strong>Sortie inférieure.</strong>
-		Bac de réception pour les documents uniquement rainés qui ne passent pas par les rouleaux de pliage.
-		</p>
-		<input type="submit" class="buttongrey" value="Télécharger le .pdf"/>
-		<input type="submit" class="button" value="Contacter-nous"/>
+			<div id="description" class="small-12 medium-6 large-6 columns" >
+				<p><?php the_content(); ?></p>
+				<a class="buttongrey" href="<?php the_field('telecharger_le_pdf'); ?>"> Télécharger le .pdf <i class="fa fa-download"></i></a><br/>
+				<a class="button" href="<?php the_field('contacter_nous'); ?>">Contacter-nous <i class="fa fa-long-arrow-right"></i></a>
+			</div>
+		</div>
 
-	</div>
+	<?php	} // end while
+	} // end if
+	?>
+</article>
 
+<div id="plus-infos">
+	<div class="row">
+			<div id="titres-infos">
+				<a href="#" id="caract-lien" >Caractéristique</a>
+				<a href="#" id='video-lien'>Vidéos</a>
+			</div>
+
+			<div id="liste-caract" class="row">
+				<p class="large-12 columns"><?php the_field('caracteristique'); ?></p>
+			</div>
+
+			<div id="video" class="">
+				<div class="large-3 columns">,</div>
+				<div class="large-6 columns">
+				  <iframe width="420" height="315" src="https://www.youtube.com/embed/pPLc8RMYmRg" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="large-3 columns">,</div>
+			</div>
 	</div>
 </div>
+
+</div> <!--FIN div #PAGE -->
+
 
 <?php get_footer();
