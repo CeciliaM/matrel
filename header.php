@@ -39,6 +39,10 @@
 		</div>
 		<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
 			<button class="menu-icon" type="button" data-toggle></button>
+			<form method=GET id="form2">
+				<input type="search" value="" id="search2" /><button id="btn-search2"><i class="fa fa-search"></i></button>
+			</form>
+
 		</div>
 
 		<div class="top-bar" id="example-menu">

@@ -18,6 +18,9 @@ get_header(); ?>
 <div id="page-produit">
 <div class="row">
 	<p id="ariane">Accueil / Produits / Raineuse-plieuse-perforation</p>
+	<form method=GET id="form1">
+		<input type="search" value="Votre recherche" id="search1" /><button id="btn-search1"><i class="fa fa-search"></i></button>
+	</form>
 	<article id="post-<?php the_ID(); ?>">
 
 		<div id="titres">
@@ -35,13 +38,13 @@ get_header(); ?>
 				<p><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></p>
 
 				<div id="min" class="row">
-					<div class="large-2 columns"><a href="#"><i class="fa fa-angle-left"></a></i></div>
-					<div class="large-8 columns">
-						<img class="thumbnail" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/miniatures/1.png" width="100" height="100">
-						<img class="thumbnail" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/miniatures/2.png" width="100" height="100">
-						<img class="thumbnail" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/miniatures/3.png" width="100" height="100">
+					<div class="small-2 large-2 columns"><a href="#"><i class="fa fa-angle-left"></a></i></div>
+					<div class="small-8 large-8 columns">
+						<img class="thumbnail" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/miniatures/1.png" >
+						<img class="thumbnail" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/miniatures/2.png" >
+						<img class="thumbnail" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/miniatures/3.png" >
 					</div>
-					<div class="large-2 columns"><a href="#"><i class="fa fa-angle-right"></a></i></div>
+					<div class="small-2 large-2 columns"><a href="#"><i class="fa fa-angle-right"></a></i></div>
 				</div>
 
 
@@ -61,21 +64,18 @@ get_header(); ?>
 
 <div id="plus-infos">
 	<div class="row">
-			<div id="titres-infos">
-				<a href="#" id="caract-lien" >Caractéristique</a>
-				<a href="#" id='video-lien'>Vidéos</a>
-			</div>
-
+			<a href="#" id="caract-lien" >Caractéristique</a>
 			<div id="liste-caract" class="row">
 				<p class="large-12 columns"><?php the_field('caracteristique'); ?></p>
 			</div>
 
+			<a href="#" id='video-lien'>Vidéos (1)</a>
 			<div id="video" class="">
-				<div class="large-3 columns">,</div>
+				<div class="large-3 columns point">,</div>
 				<div class="large-6 columns">
 				  <iframe width="420" height="315" src="https://www.youtube.com/embed/pPLc8RMYmRg" frameborder="0" allowfullscreen></iframe>
 				</div>
-				<div class="large-3 columns">,</div>
+				<div class="large-3 columns point">,</div>
 			</div>
 	</div>
 </div>

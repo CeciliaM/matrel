@@ -42,13 +42,49 @@ header {
 } /* END HEADER */
 
 
+
 #ariane {
   font-size: 10px;
   color: #666666;
   text-align: left;
+  float: left;
+}
+#form1 {
+  text-align: right;
+  width: 200px;
+  display: inline-block;
+  float: right;
+  margin-bottom: 10px;
+  position: relative;
+  margin-right: 40px;
+}
+#btn-search1 {
+  position: absolute;
+  top : 14px;
+  color: #666666;
+  font-size: 14px;
+  right: -25px;
+}
+
+#search1 {
+  padding-right: 25px;
+  text-align: right;
+  font-size: 12px;
+  border: none;
+  height: 25px;
+  background: none;
+  color: #666666;
+  box-shadow: none;
+  border-bottom: 1px solid #666666;
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+
+}
+article {
+  clear:both;
 }
 #page-produit {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .button {
@@ -88,6 +124,7 @@ header {
 }
 
 h1 {
+  clear: both;
   font-size: 25px;
   text-transform: uppercase;
   font-weight: 700;
@@ -147,6 +184,7 @@ h3 {
     }
     .thumbnail {
       border: none;
+      width: 30%;
       &:hover {
         box-shadow: 0 0 6px 1px rgba(242, 148, 0, 0.5);
       }
@@ -158,21 +196,19 @@ h3 {
 /*INFOS SUP */
 #plus-infos {
   background: #FFF;
-  #titres-infos {
+  a {
+    display: block;
     text-align: center;
-    margin-top: 20px;
-    a {
-      text-transform: uppercase;
-      color: #666666;
-      font-weight: 600;
-      font-family: "Avenir Next", sans-serif;
-      padding: 10px 15px 10px 15px;
-      &:active {
-        color: #000;
-      }
-      &:hover {
-        color: #000;
-      }
+    text-transform: uppercase;
+    color: #666666;
+    font-weight: 600;
+    font-family: "Avenir Next", sans-serif;
+    padding: 10px 15px 10px 15px;
+    &:active {
+      color: #000;
+    }
+    &:hover {
+      color: #000;
     }
   }
 
@@ -183,11 +219,13 @@ h3 {
     p {
       font-size: 12px;
       margin-bottom: 10px;
-      line-height: 10px;
+      line-height: 12px;
     }
   }
   #video {
-
+    .point {
+      color: #FFF;
+    }
   }
 } /* Fin plus infos
 
@@ -257,10 +295,9 @@ header {
       display: none;
     }
     #btn-header {
-      display: block;
+      display: none;
     }
   }
-
   #responsive-header {
     background: #FFF;
     display: block;
@@ -277,7 +314,34 @@ header {
   .menu li {
     display: block;
   }
+  #form2 {
+    float: right;
+    position: relative;
+    #search2 {
+      background: none;
+      width: 250px;
+      height: 30px;
+      border: none;
+      box-shadow: none;
+      text-align: right;
+      padding-right: 20px;
+    }
+    #btn-search2 {
+      position: absolute;
+      top : 3px;
+      color: #666666;
+      font-size: 20px;
+      right: 0px;
+
+    }
+  }
+
+} /* FIN HEADER */
+
+#form1 {
+  display: none;
 }
+
 
 /*MAIN */
 h1 {
@@ -289,16 +353,28 @@ h2 {
 
 #description {
   .button {
-  width: 80%;
+  width: 100%;
 }
   .buttongrey {
-  width: 80%;
+  width: 100%;
 }
 }
 
-#liste-caract {
-  column-count: auto;
-  padding: 20px 0px 30px 0px;
+#img {
+  #min {
+    a i {
+      font-size: 25px;
+      padding: 6px 13px;
+      border: 1px solid #666666;
+    }
+    .thumbnail {
+      width: 31%;
+    }
+  }
+}
+
+#liste-caract{
+  column-count: 1!important;
   p {
     font-size: 12px;
     margin-bottom: 10px;
@@ -310,11 +386,19 @@ h2 {
   footer {
     text-align: center;
     font-size: 14px;
+    #adress {
+      margin-bottom: 15px;
+    }
+    #menu {
+      margin-bottom: 15px;
+    }
     #social {
       .menu > li > a {
         padding: 0px;
         padding:10px;
-        font-size: 35px;
+        padding-left: 18px;
+        font-size: 50px;
+        margin-bottom: 15px;
       }
     }
     #contact {
@@ -324,6 +408,10 @@ h2 {
         width: 90%;
         padding: 15px;
       }
+    }
+
+    #ml {
+      padding-right: 25px;
     }
   }
 }
